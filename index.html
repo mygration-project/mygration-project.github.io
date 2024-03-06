@@ -79,17 +79,34 @@
 
       <!-- ================== HOME ================== -->
       <section id="home" class="section">
-        <div id="portfolio-wrapper" class="relative block-right" style="margin-bottom: 0px;">
-          <div class="portfolio-load-content-holder"></div>
-          <div class="grid" id="portfolio-grid">
-            <div class="grid-sizer"></div>
-            <div id="p-item-1" class="grid-item element-item p-one">
-              <img src="images/max/INTRO.jpg" alt="Portrait of Max" />
+        <div>
+          <div id="portfolio-wrapper" class="relative block-right" style="margin-bottom: 0px;">
+            <div class="portfolio-load-content-holder"></div>
+            <div class="grid" id="portfolio-grid">
+              <div class="grid-sizer"></div>
+              <div id="p-item-1" class="grid-item element-item p-one">
+                <img id="header_image" src="images/max/INTRO.jpg" alt="Portrait" />
+              </div>
             </div>
           </div>
-        </div>
+          <script>
+            const image_array = [
+              'images/max/INTRO.jpg',
+              'images/zeynep/INTRO.jpg',
+              'images/ghada/INTRO.jpg',
+              'images/pavel_evgenii/MYgration_PAVELEVGENII13.jpg',
+              'images/shi/INTRO.jpg',
+              'images/asia/INTRO.jpg'
+            ];
 
-        <div>
+            function get_random_image() {
+              const random_index = Math.floor(Math.random() * image_array.length);
+              const selected_image = image_array[random_index];
+              document.getElementById('header_image').src = `${selected_image}`;
+            }
+
+            window.onload(get_random_image())
+          </script>
           <h1 class="title">Dit is het MYgration Project. Dit is ons verhaal.</h1>
           <a href="#services" class="main-btn slow-scroll"><img src="images/scroll-icon-grey.png" alt=""></a>
           <p style="padding-top: 20px;"><a href="index_en.html" id="text_link">Read this page in English</a></p>
@@ -112,8 +129,14 @@
           …en jij kan lezen, en luisteren naar hun verhaal.
         </p>
         <p>
-          MYgration is een samenwerking tussen het Wijdoenmee initiatief, het Haella Fonds, Correspondents of the World
-          en Broadcast Amsterdam. Het publieke debat over migratie in Nederland blijft gepolariseerd. Aan beide kanten
+          MYgration is een samenwerking tussen het <a href="https://www.wijdoenmee.nu/" target="_blank"
+            id="text_link">Wijdoenmee! initiatief</a>, het <a href="https://haella.nl/stichting/" target="_blank"
+            id="text_link">Haella Fonds</a>, <a href="https://correspondentsoftheworld.com/" target="_blank"
+            id="text_link">Correspondents of the World</a>, en <a href="https://broadcastamsterdam.nl/"
+            target="_blank" id="text_link">Broadcast Amsterdam</a>.
+        </p>
+        <p>
+          Het publieke debat over migratie in Nederland blijft gepolariseerd. Aan beide kanten
           van het spectrum wordt in de reguliere media vaak gesproken over immigranten, vluchtelingen en asielzoekers,
           met als gevolg dat de verhalen een wij/zij-kloof in stand houden. MYgration probeert deze kloof te overbruggen
           door een ruimte te bieden waar mensen migratieverhalen in hun eigen woorden, en op hun eigen manier, kunnen
@@ -291,7 +314,7 @@
       <section id="contact" class="section">
         <hr>
         <div class="section-des">
-          The MYgration Project is organized by:
+          Het MYgration Project is organized by:
         </div>
 
         <div class="footer-row">
