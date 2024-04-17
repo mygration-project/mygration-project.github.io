@@ -119,7 +119,7 @@ img.block-right {
 }
 
 .section {
-    height: fit-content;
+    /* height: fit-content; */
     margin-top: 65px;
     padding-top: 85px;
 }
@@ -349,7 +349,7 @@ img.block-right {
 ====================================== */
 
 #home {
-    height: 100vh;
+    height: fit-content;
     padding: 15px 0;
     margin: 0;
 }
@@ -1777,4 +1777,8 @@ article {
   .footer-logo {
     width: 100%;
     max-width: 100%;
+  }
+
+  #about {
+    margin-top: 0px !important;
   }
