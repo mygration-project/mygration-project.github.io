@@ -119,6 +119,7 @@ img.block-right {
 }
 
 .section {
+    height: fit-content;
     margin-top: 65px;
     padding-top: 85px;
 }
